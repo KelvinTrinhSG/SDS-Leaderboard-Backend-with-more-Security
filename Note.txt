@@ -1,0 +1,24 @@
+{
+    "totalPlayers": 2,
+    "leaderboard": [
+        {
+            "rank": 1,
+            "player": "0xA24d7ECD79B25CE6C66f1Db9e06b66Bd11632E00",
+            "score": "99",
+            "playTime": "500"
+        },
+        {
+            "rank": 2,
+            "player": "0xFdd8cdB3765D80eb0Fd234395e2Db6845099f058",
+            "score": "5",
+            "playTime": "3"
+        }
+    ]
+}
+
+curl -X POST http://localhost:3000/api/publish \
+  -H "Content-Type: application/json" \
+  -d '{"player":"0xA24d7ECD79B25CE6C66f1Db9e06b66Bd11632E00","score":555,"playTime":120}'
+
+  curl http://localhost:3000/api/data
+
