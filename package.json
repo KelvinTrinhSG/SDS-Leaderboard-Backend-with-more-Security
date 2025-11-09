@@ -12,7 +12,8 @@
     "@somnia-chain/streams": "^0.9.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
-    "viem": "^2.38.6"
+    "viem": "^2.38.6",
+      "cors": "^2.8.5"
   },
   "repository": {
     "type": "git",

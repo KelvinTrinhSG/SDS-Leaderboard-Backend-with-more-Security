@@ -120,8 +120,8 @@ router.get("/data", async (req, res) => {
       for (const field of item) {
         const val = field.value?.value ?? field.value;
         if (field.name === "player") player = val;
-        if (field.name === "score") score = val.toString();
-        if (field.name === "playTime") playTime = val.toString();
+        if (field.name === "score") score = Number(val);
+        if (field.name === "playTime") playTime = Number(val);
       }
       return { player, score, playTime };
     });
@@ -138,7 +138,7 @@ router.get("/data", async (req, res) => {
 
     // Bước 3️⃣ - Chuyển về mảng và sắp xếp giảm dần theo score
     const leaderboard = Object.values(bestScores)
-      .sort((a, b) => Number(b.score - a.score))
+      .sort((a,b) => b.score - a.score)
       .map((e, index) => ({
         rank: index + 1,
         player: e.player,
